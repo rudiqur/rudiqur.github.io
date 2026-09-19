@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="衣锦还乡指南 - 提供回乡探亲、返乡置业、家族聚会与家乡发展的全方位实用建议与资源整合服务。">
+    <meta name="keywords" content="衣锦还乡,返乡指南,回乡探亲,家乡发展,返乡置业,家族聚会">
+    <title>衣锦还乡指南 - 归乡之路与家族荣耀规划</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513; /* SaddleBrown - 稳重、传统 */
+            --secondary-color: #D2691E; /* Chocolate - 温暖、活力 */
+            --accent-color: #F4A460; /* SandyBrown - 丰收、舒适 */
+            --bg-color: #FDFBF7; /* Paper-like background */
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-color: #E0D8C8;
+            --card-shadow: 0 4px 12px rgba(139, 69, 19, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-color);
+            font-size: 16px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        .header-cta {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .header-cta:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .search-box {
+            background: #fff;
+            border-radius: 50px;
+            padding: 10px;
+            display: inline-flex;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .search-box input {
+            border: none;
+            flex: 1;
+            padding: 10px 20px;
+            font-size: 16px;
+            outline: none;
+            border-radius: 50px;
+        }
+
+        .search-box button {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: 12px;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+            border-color: var(--secondary-color);
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(139, 69, 19, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* Content Area: Guide & Info */
+        .content-section {
+            padding: 60px 0;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .guide-article {
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .article-header h2 {
+            font-size: 26px;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .article-meta {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .article-body {
+            font-size: 16px;
+            color: #444;
+        }
+
+        .article-body p {
+            margin-bottom: 20px;
+        }
+
+        .highlight-box {
+            background-color: #FFF8F0;
+            border-left: 4px solid var(--secondary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-widget {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .sidebar-widget h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bg-color);
+            color: var(--primary-color);
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            margin-right: 12px;
+            width: 18px;
+            height: 18px;
+            accent-color: var(--secondary-color);
+        }
+
+        .checklist-item span {
+            color: var(--text-light);
+        }
+
+        .checklist-item.done span {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        /* Steps Section */
+        .steps-section {
+            background-color: #fff;
+            padding: 60px 0;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: rgba(139, 69, 19, 0.1);
+            line-height: 1;
+            min-width: 80px;
+        }
+
+        .step-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .step-content p {
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            color: var(--secondary-color);
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-light);
+            display: none;
+            padding-left: 10px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: '+';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3e2723;
+            color: #d7ccc8;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .step-item {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="#" class="logo">
+            <span>衣</span>锦还乡指南
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#guide">归乡攻略</a></li>
+                <li><a href="#steps">步骤规划</a></li>
+                <li><a href="#faq">常见问题</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+        <a href="#contact" class="header-cta">获取定制建议</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-content">
+        <h1>荣耀归乡，从心开始</h1>
+        <p>无论你是功成名就，还是寻求新的发展机遇，我们都为您提供最实用的返乡规划、家族聚会方案与家乡资源对接服务。</p>
+        <div class="search-box">
+            <input type="text" placeholder="输入您的家乡城市或具体需求...">
+            <button type="button">搜索指南</button>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="section-title">
+            <h2>全方位归乡服务体系</h2>
+            <p>一站式解决您返乡过程中的各类难题</p>
+        </div>
+        <div class="grid-3">
+            <article class="feature-card">
+                <div class="icon-box">🏠</div>
+                <h3>返乡置业与安居</h3>
+                <p>提供家乡房产市场分析、购房政策解读及装修避坑指南，助您在故土安家。</p>
+            </article>
+            <article class="feature-card">
+                <div class="icon-box">👨‍👩‍👧‍👦</div>
+                <h3>家族聚会策划</h3>
+                <p>从场地预订到流程设计，我们提供专业的家族聚会与宗亲活动组织方案。</p>
+            </article>
+            <article class="feature-card">
+                <div class="icon-box">💼</div>
+                <h3>乡情资源对接</h3>
+                <p>连接在外游子与家乡发展项目，为返乡创业、投资提供信息桥梁与政策咨询。</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="content-section" id="guide">
+    <div class="container content-wrapper">
+        <main class="guide-article">
+            <div class="article-header">
+                <h2>为什么现在流行“衣锦还乡”？</h2>
+                <div class="article-meta">发布时间：2023-10-27 | 分类：归乡文化</div>
+            </div>
+            <div class="article-body">
+                <p>“衣锦还乡”不仅是传统成语中对成功的定义，更是现代人在快节奏城市生活中对归属感的深层渴望。随着乡村振兴战略的实施，许多家乡迎来了前所未有的发展机遇。对于在外打拼的游子而言，返乡不再仅仅是看望父母，更是一次重新审视自我价值、回馈故土的契机。</p>
+                
+                <div class="highlight-box">
+                    <h4>核心价值</h4>
+                    <p>成功的定义正在多元化。如今，“衣锦还乡”更多指代的是一种心态的平和与对家庭责任的圆满履行，而非单纯物质财富的堆砌。</p>
+                </div>
+
+                <p>在规划归乡之旅前，明确您的核心诉求至关重要。是单纯的家庭团聚？还是希望利用自身资源为家乡带来改变？亦或是寻找新的商业机会？不同的目标决定了您归乡的节奏和方式。</p>
+                <p>本指南将为您拆解归乡准备、行程规划以及落地后的注意事项，确保您的归乡之旅既充满温情，又井井有条。</p>
+            </div>
+        </main>
+
+        <aside>
+            <div class="sidebar-widget">
+                <h3>归乡准备清单</h3>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check1">
+                    <label for="check1"><span>确认返乡日期与交通票务</span></label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check2">
+                    <label for="check2"><span>准备家乡特产与伴手礼</span></label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check3">
+                    <label for="check3"><span>预约家族聚会场地</span></label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check4">
+                    <label for="check4"><span>联系当地亲友与接待人</span></label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check5">
+                    <label for="check5"><span>整理个人行程与时间表</span></label>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>热门归乡目的地</h3>
+                <ul style="font-size: 15px; color: var(--text-light);">
+                    <li style="margin-bottom:10px; padding-bottom:10px; border-bottom:1px dashed #eee;"><a href="#">长三角地区 - 创业与置业</a></li>
+                    <li style="margin-bottom:10px; padding-bottom:10px; border-bottom:1px dashed #eee;"><a href="#">珠三角地区 - 产业对接</a></li>
+                    <li style="margin-bottom:10px; padding-bottom:10px; border-bottom:1px dashed #eee;"><a href="#">中西部地区 - 乡村振兴</a></li>
+                    <li style="padding-bottom:10px; border-bottom:1px dashed #eee;"><a href="#">成渝双城圈 - 生活品质</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<section class="steps-section" id="steps">
+    <div class="container">
+        <div class="section-title">
+            <h2>归乡规划四步走</h2>
+            <p>科学规划，让每一次归乡都成为美好的回忆</p>
+        </div>
+        
+        <div class="step-item">
+            <div class="step-number">01</div>
+            <div class="step-content">
+                <h3>确立归乡愿景</h3>
+                <p>在出发前，与家人进行深入沟通，明确归乡的目的。是探亲为主，还是顺便考察家乡的商业环境？确立愿景有助于筛选行程，避免在琐碎事务中迷失方向。</p>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="step-number">02</div>
+            <div class="step-content">
+                <h3>资源与信息整合</h3>
+                <p>利用互联网资源查询家乡的最新动态，包括交通路况、天气变化以及亲友的最新联系方式。对于返乡置业的用户，建议提前咨询当地房产中介或政策咨询机构。</p>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="step-number">03</div>
+            <div class="step-content">
+                <h3>行程与物资准备</h3>
+                <p>制定详细的行程表，预留出应对突发情况的缓冲时间。根据家乡的气候和风俗准备相应的衣物与礼品。如果是组织大型聚会，务必提前预订酒店、餐厅等设施。</p>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="step-number">04</div>
+            <div class="step-content">
+                <h3>落地与深度体验</h3>
+                <p>抵达家乡后，除了完成既定行程，不妨多花时间与长辈聊天、走一走熟悉的老街。这不仅是情感交流，也是为下一次的归乡积累素材和动力。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section" id="faq">
+    <div class="container">
+        <div class="section-title">
+            <h2>归乡常见问题解答</h2>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">归乡期间如何平衡探亲与考察的时间？</div>
+            <div class="faq-answer">建议采用“弹性时间表”。将核心的探亲时间（如晚餐、周末）固定，将考察行程安排在工作日或非高峰时段，避免因行程冲突影响家庭团聚的温馨氛围。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">返乡置业需要注意哪些风险？</div>
+            <div class="faq-answer">首要关注房屋产权是否清晰，周边配套设施（学校、医院）是否完善，以及未来的城市规划走向。建议实地考察，并咨询当地专业人士，切勿仅凭网络信息做决定。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">家族聚会人数众多，如何组织更高效？</div>
+            <div class="faq-answer">推荐使用专业的活动策划工具或提前建立微信群进行分工。明确主持人、财务、后勤等角色，并提前发放电子邀请函，收集 dietary restrictions（饮食禁忌）等信息。</div>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="font-size: 14px; line-height: 1.8; color: #a1887f;">
+                    “衣锦还乡指南”致力于连接游子与家乡，提供最实用的归乡规划服务。我们相信，每一次归乡都值得被精心安排。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">归乡攻略</a></li>
+                    <li><a href="#">家族聚会模板</a></li>
+                    <li><a href="#">家乡房产资讯</a></li>
+                    <li><a href="#">创业扶持政策</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li>邮箱：contact@guixiang.com</li>
+                    <li>电话：400-123-4567</li>
+                    <li>地址：中国·某市某区某街道</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 衣锦还乡指南. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // FAQ 交互逻辑
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // 关闭其他打开的项
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // 切换当前项
+                item.classList.toggle('active');
+            });
+        });
+
+        // 搜索框模拟交互
+        const searchInput = document.querySelector('.search-box input');
+        const searchBtn = document.querySelector('.search-box button');
+        
+        function performSearch() {
+            const val = searchInput.value.trim();
+            if(val) {
+                alert('正在为您搜索关于“' + val + '”的归乡指南信息...');
+            } else {
+                searchInput.focus();
+            }
+        }
+
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', (e) => {
+            if(e.key === 'Enter') performSearch();
+        });
+    });
+</script>
+
+</body>
+</html>
