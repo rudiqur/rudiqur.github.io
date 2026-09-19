@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图铃下载-海量高清手机壁纸与来电铃声资源站</title>
+    <meta name="description" content="图铃下载提供最新最全的手机高清壁纸、动态壁纸、来电铃声、短信铃声及短视频背景音乐。支持多种手机机型，一键下载，安全无毒，免费资源。">
+    <meta name="keywords" content="图铃下载,手机壁纸,来电铃声,动态壁纸,短信铃声,手机铃声下载">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary-color: #f3f4f6;
+            --text-main: #1f2937;
+            --text-sub: #6b7280;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+            --border-color: #e5e7eb;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: var(--secondary-color);
+            border-radius: 20px;
+            padding: 5px 15px;
+            width: 300px;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            outline: none;
+            flex: 1;
+            padding: 5px;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-sub);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .tag:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Category Section */
+        .category-section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 22px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 20px;
+        }
+
+        .category-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+
+        .category-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .category-name {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text-main);
+        }
+
+        /* Wallpapers Grid */
+        .wallpaper-section {
+            padding: 40px 0;
+        }
+
+        .wallpaper-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .wallpaper-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.3s;
+            position: relative;
+        }
+
+        .wallpaper-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-image {
+            width: 100%;
+            aspect-ratio: 9/16;
+            object-fit: cover;
+            background-color: #e5e7eb;
+        }
+
+        .card-body {
+            padding: 12px;
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-sub);
+        }
+
+        .download-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .download-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Ringtones Section */
+        .ringtones-section {
+            padding: 40px 0;
+            background-color: #fff;
+        }
+
+        .ringtones-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ringtone-item {
+            display: flex;
+            align-items: center;
+            background: var(--bg-body);
+            padding: 15px;
+            border-radius: var(--radius-md);
+            transition: background 0.2s;
+        }
+
+        .ringtone-item:hover {
+            background: #f0f7ff;
+        }
+
+        .ringtone-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .ringtone-info {
+            flex: 1;
+        }
+
+        .ringtone-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .ringtone-meta {
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        .ringtone-action {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .ringtone-btn {
+            padding: 6px 15px;
+            border-radius: 4px;
+            font-size: 13px;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            background: white;
+            color: var(--text-main);
+        }
+
+        .ringtone-btn.primary {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Tips Section */
+        .tips-section {
+            padding: 40px 0;
+            background-color: #fff;
+        }
+
+        .tips-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .tips-content h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .tips-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        .tips-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .tips-image img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            margin-top: 15px;
+            max-width: 300px;
+            line-height: 1.8;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #374151;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: auto;
+                flex-wrap: wrap;
+                padding: 10px 0;
+            }
+
+            .nav-menu {
+                display: none; /* Simplified for mobile demo */
+            }
+
+            .search-bar {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .tips-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+                图铃<span>下载</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#" class="active">首页</a>
+                <a href="#">高清壁纸</a>
+                <a href="#">动态壁纸</a>
+                <a href="#">来电铃声</a>
+                <a href="#">短信铃声</a>
+                <a href="#">热门榜单</a>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索壁纸、铃声、视频...">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>让手机壁纸与铃声，记录你的独特风格</h1>
+            <p>每日更新海量4K高清壁纸、流行来电铃声及短视频BGM，一键下载，无需注册。</p>
+            <div class="hero-tags">
+                <span class="tag">#动漫壁纸</span>
+                <span class="tag">#风景高清</span>
+                <span class="tag">#明星铃声</span>
+                <span class="tag">#游戏音效</span>
+                <span class="tag">#个性短信</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="category-section container">
+        <h2 class="section-title">热门分类</h2>
+        <div class="category-grid">
+            <div class="category-item">
+                <span class="category-icon">🖼️</span>
+                <span class="category-name">高清壁纸</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">🎬</span>
+                <span class="category-name">动态壁纸</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">📱</span>
+                <span class="category-name">手机锁屏</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">🔔</span>
+                <span class="category-name">来电铃声</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">💬</span>
+                <span class="category-name">短信铃声</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">🎵</span>
+                <span class="category-name">短视频BGM</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">🎮</span>
+                <span class="category-name">游戏音效</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">🎵</span>
+                <span class="category-name">MP3铃声</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wallpaper Section -->
+    <section class="wallpaper-section container">
+        <h2 class="section-title">今日精选壁纸</h2>
+        <div class="wallpaper-grid">
+            <!-- Item 1 -->
+            <article class="wallpaper-card">
+                <img src="https://picsum.photos/seed/wall1/300/533" alt="极光风景壁纸" class="card-image">
+                <div class="card-body">
+                    <h3 class="card-title">北欧极光夜空壁纸</h3>
+                    <div class="card-meta">
+                        <span>4K高清</span>
+                        <button class="download-btn">下载</button>
+                    </div>
+                </div>
+            </article>
+            <!-- Item 2 -->
+            <article class="wallpaper-card">
+                <img src="https://picsum.photos/seed/wall2/300/533" alt="动漫少女壁纸" class="card-image">
+                <div class="card-body">
+                    <h3 class="card-title">赛博朋克动漫壁纸</h3>
+                    <div class="card-meta">
+                        <span>动态壁纸</span>
+                        <button class="download-btn">下载</button>
+                    </div>
+                </div>
+            </article>
+            <!-- Item 3 -->
+            <article class="wallpaper-card">
+                <img src="https://picsum.photos/seed/wall3/300/533" alt="简约几何壁纸" class="card-image">
+                <div class="card-body">
+                    <h3 class="card-title">极简几何抽象画</h3>
+                    <div class="card-meta">
+                        <span>锁屏专用</span>
+                        <button class="download-btn">下载</button>
+                    </div>
+                </div>
+            </article>
+            <!-- Item 4 -->
+            <article class="wallpaper-card">
+                <img src="https://picsum.photos/seed/wall4/300/533" alt="自然风景壁纸" class="card-image">
+                <div class="card-body">
+                    <h3 class="card-title">静谧湖畔风景</h3>
+                    <div class="card-meta">
+                        <span>自然风光</span>
+                        <button class="download-btn">下载</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Ringtones Section -->
+    <section class="ringtones-section">
+        <div class="container">
+            <h2 class="section-title">热门来电铃声</h2>
+            <div class="ringtones-list">
+                <div class="ringtone-item">
+                    <div class="ringtone-icon">🎵</div>
+                    <div class="ringtone-info">
+                        <div class="ringtone-title">商务通知提示音</div>
+                        <div class="ringtone-meta">MP3格式 • 0:05 • 适合商务人士</div>
+                    </div>
+                    <div class="ringtone-action">
+                        <button class="ringtone-btn primary">下载MP3</button>
+                        <button class="ringtone-btn">试听</button>
+                    </div>
+                </div>
+                <div class="ringtone-item">
+                    <div class="ringtone-icon">🎵</div>
+                    <div class="ringtone-info">
+                        <div class="ringtone-title">清脆叮咚铃声</div>
+                        <div class="ringtone-meta">MP3格式 • 0:03 • 轻快活泼</div>
+                    </div>
+                    <div class="ringtone-action">
+                        <button class="ringtone-btn primary">下载MP3</button>
+                        <button class="ringtone-btn">试听</button>
+                    </div>
+                </div>
+                <div class="ringtone-item">
+                    <div class="ringtone-icon">🎵</div>
+                    <div class="ringtone-info">
+                        <div class="ringtone-title">欧美流行来电</div>
+                        <div class="ringtone-meta">MP3格式 • 0:08 • 时尚感强</div>
+                    </div>
+                    <div class="ringtone-action">
+                        <button class="ringtone-btn primary">下载MP3</button>
+                        <button class="ringtone-btn">试听</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips-section container">
+        <div class="tips-container">
+            <div class="tips-content">
+                <h3>如何设置手机铃声与壁纸？</h3>
+                <ul class="tips-list">
+                    <li>下载壁纸后，在手机相册中找到图片，点击“设为壁纸”即可选择锁屏或主屏背景。</li>
+                    <li>下载铃声文件（MP3格式）后，通过数据线传输至手机，进入“设置-声音-来电铃声”进行导入。</li>
+                    <li>部分手机支持在线试听，建议下载前先试听以确保音质符合需求。</li>
+                    <li>动态壁纸通常需要特定的壁纸APP支持，下载后请查看应用内说明进行安装。</li>
+                </ul>
+            </div>
+            <div class="tips-image">
+                <img src="https://picsum.photos/seed/setup/500/300" alt="手机设置指南示意图">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" style="color: white;">
+                        图铃<span>下载</span>
+                    </a>
+                    <p>专注于为用户提供高品质、无版权争议的手机壁纸与铃声资源。所有资源仅供个人欣赏与学习使用，请勿用于商业用途。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">高清壁纸</a></li>
+                        <li><a href="#">动态壁纸</a></li>
+                        <li><a href="#">来电铃声</a></li>
+                        <li><a href="#">短信铃声</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">使用说明</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">联系站长</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 图铃下载 All Rights Reserved. 本站资源均来自网络收集整理。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
