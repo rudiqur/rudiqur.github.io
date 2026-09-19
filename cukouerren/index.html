@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="粗口二人转全集 - 本站提供经典二人转、东北二人转、搞笑二人转等传统民间艺术资源的在线浏览与收藏。内容包含经典段子、搞笑合集及文化赏析，致力于传播民间喜剧艺术。">
+    <meta name="keywords" content="粗口二人转全集,二人转,东北二人转,民间艺术,搞笑二人转,二人转全集">
+    <title>粗口二人转全集 - 经典民间艺术与搞笑二人转合集</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --secondary-color: #ffca28;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            color: var(--white);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .search-box {
+            background: var(--white);
+            padding: 0.5rem;
+            border-radius: 50px;
+            display: inline-flex;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            outline: none;
+            border-radius: 50px;
+        }
+
+        .search-box button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .search-box button:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            width: 100%;
+        }
+
+        /* Categories */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary-color);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .category-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-card p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Video List */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .video-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: #e0e0e0;
+            overflow: hidden;
+        }
+
+        .video-thumbnail img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .video-card:hover .video-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0,0,0,0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            opacity: 0.8;
+        }
+
+        .video-info {
+            padding: 1.2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            color: var(--text-dark);
+        }
+
+        .video-meta {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            color: var(--text-gray);
+        }
+
+        .video-actions {
+            margin-top: auto;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: var(--transition);
+            text-align: center;
+            flex: 1;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #b71c1c;
+        }
+
+        .btn-outline {
+            border: 1px solid #ddd;
+            color: var(--text-dark);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--white);
+            padding: 3rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .feature-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-content p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #b0b0b0;
+            padding: 3rem 1rem 1rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #3d3d3d;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span>转</span>二人转大全
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">经典合集</a></li>
+                    <li><a href="#">搞笑段子</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>粗口二人转全集</h1>
+        <p>汇集全网最经典的民间艺术资源，探索二人转的幽默魅力与传统文化精髓。</p>
+        <div class="search-box">
+            <input type="text" placeholder="搜索您想看的二人转作品...">
+            <button type="button">搜索</button>
+        </div>
+    </section>
+
+    <main>
+        <!-- 分类导航 -->
+        <section class="categories">
+            <div class="section-title">
+                <span>热门分类</span>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <span class="category-icon">🎤</span>
+                    <h3>经典二人转</h3>
+                    <p>传统小帽与正戏</p>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">😄</span>
+                    <h3>搞笑二人转</h3>
+                    <p>包袱抖得响亮</p>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🔥</span>
+                    <h3>高能合集</h3>
+                    <p>集锦与精选</p>
+                </div>
+                <div class="category-card">
+                    <span class="category-icon">🎭</span>
+                    <h3>民间艺术</h3>
+                    <p>文化赏析与介绍</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 内容列表 -->
+        <section class="content">
+            <div class="section-title">
+                <span>最新收录</span>
+                <a href="#" style="font-size: 0.9rem; color: var(--primary-color); text-decoration: none;">查看更多 &raquo;</a>
+            </div>
+            <div class="content-grid">
+                
+                <article class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://picsum.photos/seed/twoerzhuan1/400/225" alt="二人转表演视频缩略图">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">【经典】李老根与翠花之精装二人转</h3>
+                        <div class="video-meta">
+                            <span>2023-10-24</span>
+                            <span class="tag">经典</span>
+                        </div>
+                        <div class="video-actions">
+                            <a href="#" class="btn btn-primary">播放</a>
+                            <a href="#" class="btn btn-outline">收藏</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://picsum.photos/seed/twoerzhuan2/400/225" alt="二人转表演视频缩略图">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">【高能】民间绝活二人转专场</h3>
+                        <div class="video-meta">
+                            <span>2023-10-23</span>
+                            <span class="tag">高能</span>
+                        </div>
+                        <div class="video-actions">
+                            <a href="#" class="btn btn-primary">播放</a>
+                            <a href="#" class="btn btn-outline">收藏</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://picsum.photos/seed/twoerzhuan3/400/225" alt="二人转表演视频缩略图">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">【合集】东北二人转必看段子集锦</h3>
+                        <div class="video-meta">
+                            <span>2023-10-22</span>
+                            <span class="tag">合集</span>
+                        </div>
+                        <div class="video-actions">
+                            <a href="#" class="btn btn-primary">播放</a>
+                            <a href="#" class="btn btn-outline">收藏</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://picsum.photos/seed/twoerzhuan4/400/225" alt="二人转表演视频缩略图">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">【搞笑】二人转小品：相亲记</h3>
+                        <div class="video-meta">
+                            <span>2023-10-21</span>
+                            <span class="tag">小品</span>
+                        </div>
+                        <div class="video-actions">
+                            <a href="#" class="btn btn-primary">播放</a>
+                            <a href="#" class="btn btn-outline">收藏</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://picsum.photos/seed/twoerzhuan5/400/225" alt="二人转表演视频缩略图">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">【传统】柳琴戏二人转选段</h3>
+                        <div class="video-meta">
+                            <span>2023-10-20</span>
+                            <span class="tag">传统</span>
+                        </div>
+                        <div class="video-actions">
+                            <a href="#" class="btn btn-primary">播放</a>
+                            <a href="#" class="btn btn-outline">收藏</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://picsum.photos/seed/twoerzhuan6/400/225" alt="二人转表演视频缩略图">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">【欢快】热闹非凡二人转现场</h3>
+                        <div class="video-meta">
+                            <span>2023-10-19</span>
+                            <span class="tag">现场</span>
+                        </div>
+                        <div class="video-actions">
+                            <a href="#" class="btn btn-primary">播放</a>
+                            <a href="#" class="btn btn-outline">收藏</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 平台优势 -->
+        <section class="features">
+            <div class="section-title">
+                <span>为什么选择我们</span>
+            </div>
+            <div class="features-container">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-content">
+                        <h4>极速播放</h4>
+                        <p>采用先进流媒体技术，确保二人转视频流畅播放，无卡顿。</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📁</div>
+                    <div class="feature-content">
+                        <h4>分类清晰</h4>
+                        <p>从经典传统到现代搞笑，各类二人转资源分类明确，查找方便。</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <div class="feature-content">
+                        <h4>全端适配</h4>
+                        <p>无论是电脑、平板还是手机，随时随地欣赏精彩二人转。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于二人转大全</h4>
+                <p style="font-size: 0.9rem; line-height: 1.6;">
+                    本站致力于收录和展示优秀的民间二人转艺术作品，为喜爱民间喜剧文化的用户提供一个优质的观看与交流平台。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">网站地图</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">用户协议</a></li>
+                    <li><a href="#">联系合作</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>热门标签</h4>
+                <ul>
+                    <li><a href="#">二人转大全</a></li>
+                    <li><a href="#">搞笑二人转</a></li>
+                    <li><a href="#">东北二人转</a></li>
+                    <li><a href="#">民间艺术</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 二人转大全网 版权所有 | 仅供学习交流使用，请支持正版艺术作品</p>
+        </div>
+    </footer>
+
+</body>
+  </html>
