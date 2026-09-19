@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="萨姆斯 - 科幻动作游戏经典角色档案与游戏全系列回顾。探索银河联邦赏金猎人萨姆斯·阿兰的传奇生涯、经典武器装备与游戏攻略。">
+    <meta name="keywords" content="萨姆斯, 银河战士, 萨姆斯阿兰, Metroid, 任天堂, 科幻游戏, 游戏攻略">
+    <title>萨姆斯-银河联邦赏金猎人传奇与游戏全攻略</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #00d2ff;
+            --secondary-color: #3a7bd5;
+            --accent-color: #ff0055;
+            --bg-dark: #0b0f19;
+            --bg-card: #151b2b;
+            --text-main: #e0e6ed;
+            --text-muted: #94a3b8;
+            --border-color: #2d3748;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: rgba(11, 15, 25, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: radial-gradient(circle at center, #1a233a 0%, var(--bg-dark) 70%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(11, 15, 25, 0.3), var(--bg-dark));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(0, 210, 255, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+            color: #fff;
+            font-weight: bold;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 210, 255, 0.6);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1rem;
+            color: var(--text-main);
+        }
+
+        /* Character Profile Grid */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            object-fit: cover;
+            background-color: #000;
+        }
+
+        .profile-info {
+            padding: 2rem;
+        }
+
+        .profile-info h2 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+        }
+
+        .stat-value {
+            font-weight: bold;
+        }
+
+        /* Game Series */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .game-card {
+            background: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .card-image {
+            height: 180px;
+            background-color: #2d3748;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .game-card:hover .card-image img {
+            opacity: 1;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .card-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            background: rgba(0, 210, 255, 0.1);
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        /* Weapons Section */
+        .weapons-section {
+            background-color: #0f1320;
+        }
+
+        .weapon-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .weapon-item {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--accent-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .weapon-item h4 {
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .weapon-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            flex-grow: 1;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-muted);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1rem 1.5rem;
+            max-height: 200px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #05080f;
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 0;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            color: #4a5568;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-img {
+                height: 250px;
+                min-height: auto;
+            }
+
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+
+            .nav-wrapper {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                <span>SAMUS</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">角色档案</a></li>
+                    <li><a href="#games">游戏系列</a></li>
+                    <li><a href="#weapons">武器装备</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>萨姆斯·阿兰</h1>
+                <p>银河联邦最致命的赏金猎人。身穿先进的动力装甲，穿梭于星际之间，猎杀危险的异虫，揭开宇宙深处的秘密。</p>
+                <a href="#games" class="cta-button">探索游戏宇宙</a>
+            </div>
+        </section>
+
+        <!-- Character Profile -->
+        <section class="container">
+            <h2 class="section-title">角色档案</h2>
+            <div class="profile-grid">
+                <div class="profile-img-wrapper">
+                    <img src="https://picsum.photos/seed/samus/600/800" alt="萨姆斯·阿兰概念图" class="profile-img">
+                </div>
+                <div class="profile-info">
+                    <h2>赏金猎人萨姆斯</h2>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+                        萨姆斯·阿兰（Samus Aran）是任天堂旗下经典游戏系列《银河战士》中的主角。她是一个半人类、半赛普洛斯人的混血儿。幼年时，她的父母在殖民星球科罗尼被异虫杀害，她被赛普洛斯人（Chozo）所救并抚养长大。
+                    </p>
+                    <div class="stat-row">
+                        <span class="stat-label">所属阵营</span>
+                        <span class="stat-value">银河联邦</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">出生星球</span>
+                        <span class="stat-value">科罗尼</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">装甲型号</span>
+                        <span class="stat-value">X级动力装甲</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">标志性能力</span>
+                        <span class="stat-value">超能力球</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">核心武器</span>
+                        <span class="stat-value">聚变光束</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Series -->
+        <section id="games" class="container">
+            <h2 class="section-title">银河战士系列</h2>
+            <div class="game-grid">
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/metroid1/400/300" alt="银河战士 1">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge">1986</span>
+                        <span class="badge">FC</span>
+                        <h3>银河战士</h3>
+                        <p>系列的起源之作，确立了探索、解谜和平台跳跃的核心玩法。</p>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/supermetroid/400/300" alt="超级银河战士">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge">1994</span>
+                        <span class="badge">SFC</span>
+                        <h3>超级银河战士</h3>
+                        <p>被广泛认为是系列巅峰之作，拥有宏大的关卡设计和感人的剧情。</p>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/metroidprime/400/300" alt="银河战士 Prime">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge">2002</span>
+                        <span class="badge">GC</span>
+                        <h3>银河战士 Prime</h3>
+                        <p>横版卷轴向第三人称视角的革新之作，带来了沉浸式的科幻体验。</p>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/metroidfederation/400/300" alt="银河战士 生存恐惧">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge">2021</span>
+                        <span class="badge">Switch</span>
+                        <h3>银河战士 生存恐惧</h3>
+                        <p>时隔16年的正统续作，引入了恐怖生存元素，再次震撼玩家。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Weapons Section -->
+        <section class="weapons-section">
+            <div class="container">
+                <h2 class="section-title">经典武器装备</h2>
+                <div class="weapon-list">
+                    <div class="weapon-item">
+                        <h4>聚变光束</h4>
+                        <p>萨姆斯的基础武器，可以发射出高能粒子束，对大多数敌人造成伤害。</p>
+                    </div>
+                    <div class="weapon-item">
+                        <h4>冰冻光束</h4>
+                        <p>能将敌人冻结成冰块，冻结后的敌人可以被摧毁，或者作为平台使用。</p>
+                    </div>
+                    <div class="weapon-item">
+                        <h4>炸弹</h4>
+                        <p>萨姆斯随身携带的远程爆破装置，用于破坏墙壁、机关或击杀敌人。</p>
+                    </div>
+                    <div class="weapon-item">
+                        <h4>导弹</h4>
+                        <p>比光束威力更大的武器，部分强力敌人只能通过导弹击败。</p>
+                    </div>
+                    <div class="weapon-item">
+                        <h4>潜行能力</h4>
+                        <p>通过能量球形态进入潜行模式，可以绕过部分敌人或潜入秘密区域。</p>
+                    </div>
+                    <div class="weapon-item">
+                        <h4>双足机甲</h4>
+                        <p>在特定关卡中，萨姆斯可以解除装甲，驾驶强大的战斗机甲对抗强敌。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container">
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">萨姆斯是男性还是女性？</div>
+                    <div class="faq-answer">
+                        萨姆斯·阿兰是女性角色。这是任天堂游戏界著名的“隐藏性别”梗，玩家通常需要通关游戏才能看到她的女性形象。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">“萨姆斯”是什么意思？</div>
+                    <div class="faq-answer">
+                        “萨姆斯”在游戏中并非指代某个人物，而是指代萨姆斯所穿戴的X级动力装甲。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">哪些平台可以玩到银河战士系列？</div>
+                    <div class="faq-answer">
+                        经典作品主要在FC、SFC、Wii U Virtual Console等平台。Prime三部曲在Wii、Wii U和Switch上都有发售。最新作《银河战士 生存恐惧》仅支持Nintendo Switch。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">游戏攻略</a>
+                <a href="#">角色图鉴</a>
+                <a href="#">联系支持</a>
+            </div>
+            <p class="copyright">
+                本站为粉丝建设内容，仅供学习与交流使用。<br>
+                银河战士及相关内容版权归Nintendo所有。
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
